@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+
+
+.home-page {
+  display: flex;
+}
+
+.profile{
+  /*flex: 8;*/
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  /*padding: 10px;*/
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  overflow: scroll;
+  z-index: 1000;
+}
+
+.view-cats {
+  margin-left: 250px;
+  flex: 16;
+  background: #fff;
+  min-height: 400px;
+}
+
+.about-cat{
+  flex: 9;
+  background: #f1f1f1;
+}
+
+.interest-container{
+  margin: 50px 10px;
+}
+.interest-container h3{
+  font-weight: 300;
+  margin: 8px 0px;
+}
+.interest-container hr{
+  border-color: #fff;
+}
+
+.interest-container .interest-one{
+  border: 1px solid #333;
+  padding: 6px 10px;
+  font-family: 'Lato';
+  font-weight: 500;
+  margin: 5px;
+}
+
+.interest-container .interests-box{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar { text-align: center; }
+
+.avatar img{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+}
+.avatar p { 
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #FB4FAF; 
+}
+
+.bio-text{
+  font-weight: 300;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.menu{
+  margin-top: 20px;
+}
+
+.menu ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.menu ul li div{
+  
+}
+.menu ul li {
+  padding: 8px 5px;
+  display: flex;
+  align-items: center;
+}
+.menu ul a {
+  color: #222222;
+  text-decoration: none;
+}
+.menu ul a:hover li{
+  background-color: #fff;
+}
+.menu ion-icon {
+  font-size: 1.45em;
+  color: #9027E2;
+  margin: 0 10px;
+}
+.menu ul li p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.topbar{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  /*border-bottom: 1px solid #ccc;*/
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.topbar-icon{
+  /*margin: 10px;*/
+}
+
+.topbar-icon:hover ion-icon{
+  color: #07ABA0;
+  cursor: pointer;
+}
+
+.topbar-icon ion-icon{
+  font-size: 1.8em;
+  color: #888;
+}
+
+.topbar-icon span{
+  background: red;
+  color: #fff;
+  padding: 2px 4px;
+  font-weight: 800;
+  font-size: 0.8em;
+  border-radius: 2px;
+  position: absolute;
+  margin-top: 17px;
+  margin-left: -10px;
+}
+
+
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 10px 8px;
+}
+
+.navigation-icon{
+  background: #9027E2;
+  padding: 8px; 
+  border-radius: 50%;
+  margin: 0 10px;
+  width: 30px;
+  height: 30;
+  text-align: center;
+}
+
+.navigation-icon:hover{
+  background-color: #9e3bec;
+  cursor: pointer;
+}
+
+.navigation-icon ion-icon{
+  color: #fff;
+  font-size: 27px;
+}
+
+.image-couple{
+  border: 1px solid #ccc;
+  flex: 1;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #f1f1f1;
+}
+.image-couple img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.image-couple h3{ 
+  font-weight: 800;
+  color: #FB4FAF;
+}
+.image-couple p {
+  font-weight: 300;
+}
+
+
+.reactions{
+  display: flex;
+  justify-content: center;
+}
+
+.reaction-icon{
+  padding: 20px;
+  border-radius: 50%;
+  margin: 15px 15px;
+  opacity: 0.8;
+}
+.reaction-icon ion-icon{
+  font-size: 28px;
+  color: #fff;
+}
+
+.reaction-icon:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.show-mobile{
+  display: none;
+}
+
+/* ipad size */
+@media (max-width: 768px){
+  .profile{
+    display: none;
+    margin-top: 58px;
+  }
+  .about-cat{
+    /*display: none;*/
+    display: block; /* esta se quita cuando se haga implementación final */
+    position: fixed;
+    width: 300px;
+    margin-top: 58px;
+    right: 0;
+    height: 100%;
+  }
+  .view-cats{
+    margin-left: 0px;
+  }
+  .show-mobile{
+    display: block;
+  }
+}
+
+.login{
+  width: 300px;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  /*padding: 20px;*/
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.login form{
+  margin: 30px 20px;
+  padding: 0px;
+}
+
+.input-custom{
+  margin: 15px 0; 
+}
+.input-custom label{
+  width: 100%;
+  text-align: left !important;
+  float: left;
+  margin-bottom: 4px;
+  font-family: 'Lato';
+  color: #333;
+}
+.input-custom input, .input-custom textarea {
+  width: 100%;
+  background: #f2f2f2;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1.1em;
+  font-family: 'Lato';
+  color: #444;
+}
+
+.button-primary input {
+  cursor: pointer;
+  font-size: 1.15em;
+  background: #07ABA0;
+  color: #fff;
+  padding: 6px 85px;
+  font-family: 'Lato';
+  border-radius: 6px;
+  opacity: 0.8;
+}
+
+.button-primary input:hover{
+  opacity: 1;
+}
+
+.signup-link {
+  color: #666;
+  font-family: 'Lato';
+}
+.signup-link a {
+  margin-left: 15px;
+  font-weight: bold;
+  color: #9e3bec;
+}
+
+.divider {
+  width: 5px;
+  height: 5px;
+  border: 1px solid #ccc;
+  margin: 0 15px;
+}
+
+.form-preferences label {
+  font-family: 'Lato';
+  font-size: 1.1em;
+  color: #333;
+}
+
+.preferences-ages-container {
+  margin: 15px 30px;
+}
+
+.rc-slider-track {
+  background: #9e3bec !important;
+}
