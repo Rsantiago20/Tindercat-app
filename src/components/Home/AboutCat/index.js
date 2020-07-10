@@ -1,13 +1,25 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Interest } from './components/Interests'
 import { Preferences } from './components/Preferences'
+import { AboutContext } from '../../../contexts/AboutContext'
 import { PreferencesAges } from './components/PreferencesAges'
 import { HTTP_CONSTANTS } from '../../../config/http-constants'
 import { requestHttp } from '../../../config/http-server'
 
+const showAboutPanel = {
+	display : 'block'
+}
+
+const hideAboutPanel = {
+	display : 'none'
+}
+
 export const AboutCat = ({preferences, interest}) => {
 
+    const { aboutPanel } = useContext(AboutContext)
     const [ preferencesUpdated, setPreferencesUpdated ] = useState(preferences)
+
+    
 
     const prefChangedHandler = (newGender) => {
         setPreferencesUpdated(prevState => ({
@@ -43,7 +55,7 @@ export const AboutCat = ({preferences, interest}) => {
     }
 
     return (
-        <div className="about-cat">
+        <div style={ aboutPanel ? showAboutPanel : hideAboutPanel } className="about-cat">
             <Preferences onChange={ prefChangedHandler } gender={ preferences.gender } />
             <PreferencesAges notifyChange={ prefAgesChangedHandler } ageMax={ preferences.age_max } ageMin={ preferences.age_min } />
             <Interest interestCat={ interest } />

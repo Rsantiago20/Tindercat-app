@@ -7,7 +7,7 @@ const fillStyle = {
 }
 
 export const InterestOne = ({ name = '...', status = false }) => (
-    <div style={ status ? fillStyle: null } className="interest-one">
-        { name }
+    <div onClick={() => {alert("Hola")} } style={ status ? fillStyle: null } className="interest-one">
+       { name }
     </div>
 )

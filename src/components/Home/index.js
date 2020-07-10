@@ -5,6 +5,7 @@ import { AboutCat } from './AboutCat'
 import { ProfileContextStore } from '../../contexts/ProfileContext'
 import { HTTP_CONSTANTS } from '../../config/http-constants'
 import { requestHttp } from '../../config/http-server'
+import { AboutContextStore } from '../../contexts/AboutContext'
 
 export const Home = () => {
 
@@ -39,6 +40,7 @@ export const Home = () => {
     return (
         <div className="home-page">
             <ProfileContextStore>
+            <AboutContextStore>
                 {
                     Object.keys(cat).length // false == 0
                     ? <Fragment>
@@ -48,6 +50,7 @@ export const Home = () => {
                     </Fragment>
                     : <p>Loading app...</p>
                 }
+            </AboutContextStore>
             </ProfileContextStore>
         </div>
     )
